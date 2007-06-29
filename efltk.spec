@@ -6,7 +6,7 @@
 %if %cvsversion
 %define release %mkrel 0.%{cvsver}.1
 %elseif
-%define release %mkrel 1
+%define release %mkrel 2
 %endif
 
 %define pakdir %{name}-%{version}
@@ -38,7 +38,7 @@ Group: 		System/Libraries
 
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: 	gettext
-BuildRequires:	libx11-devel libxext-devel freetype2-devel libz-devel libxrender-devel fontconfig-devel x11-proto-devel xft2-devel
+BuildRequires:	libx11-devel libxext-devel freetype2-devel libz-devel libxrender-devel fontconfig-devel libpng-devel x11-proto-devel xft2-devel
 
 %description
 Extended Fast Light Toolkit (eFLTK)

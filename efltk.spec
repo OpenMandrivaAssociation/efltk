@@ -6,7 +6,7 @@
 %if %cvsversion
 %define release %mkrel 0.%{cvsver}.1
 %elseif
-%define release %mkrel 3
+%define release %mkrel 4
 %endif
 
 %define pakdir %{name}-%{version}
@@ -196,7 +196,7 @@ rm -fr $RPM_BUILD_ROOT
 %defattr(-, root, root)
 %{_includedir}/*
 %multiarch %{_bindir}/multiarch-*-linux/*
-%{_bindir}/*
+%{_bindir}/efltk-config
 #%{_libdir}/*.a
 #%{_libdir}/*.la
 

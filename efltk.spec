@@ -14,6 +14,7 @@ Summary:	A stable, small and fast cross-platform GUI ToolKit
 URL: 		http://ede.sourceforge.net
 License: 	LGPLv2+
 Group: 		System/Libraries
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: 	gettext
 BuildRequires:	libx11-devel
 BuildRequires:	libxext-devel

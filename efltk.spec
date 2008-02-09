@@ -1,6 +1,6 @@
 %define name	efltk
 %define version	2.0.7
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 %define major		2.0
 %define libname		%mklibname %{name} %major
@@ -59,7 +59,7 @@ Summary: Header files and libraries for developing apps which will eFLTK
 Version: 	%{version}
 Release: 	%{release}
 Group: 		Development/C++
-Requires: 	%{libname} = %{version}
+Requires: 	%{libname} = %{version}-%{release}
 Provides:	efltk-devel
 Obsoletes:	%{_lib}efltk2.0-devel
 
@@ -144,7 +144,7 @@ rm -fr %{buildroot}
 %postun -n %{libname} -p /sbin/ldconfig
 
 %files -n %{libname}
-%{_libdir}/lib*.so*
+%{_libdir}/lib*.so.%{major}*
 
 %files -n efluid
 %defattr(-, root, root)
@@ -165,7 +165,7 @@ rm -fr %{buildroot}
 %files  -f %{name}.lang -n %{develname}
 %defattr(-, root, root)
 %doc doc/*
-%defattr(-, root, root)
+%{_libdir}/lib*.so
 %{_includedir}/*
 %multiarch %{_bindir}/multiarch-*-linux/*
 %{_bindir}/efltk-config

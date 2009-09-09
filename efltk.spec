@@ -1,6 +1,6 @@
 %define name	efltk
 %define version	2.0.7
-%define release	%mkrel 4
+%define release	%mkrel 5
 
 %define major		2.0
 %define libname		%mklibname %{name} %major

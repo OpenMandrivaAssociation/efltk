@@ -15,6 +15,11 @@ URL: 		https://ede.sourceforge.net
 License: 	LGPLv2+
 Group: 		System/Libraries
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: 	gettext
 BuildRequires:	libx11-devel
 BuildRequires:	libxext-devel
